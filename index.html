@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<title>Grupo Folclórico Sensação Paraense</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+height:70px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("assets/Fotos/Banner.jfif");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#ffd700;
+color:#111;
+font-weight:700;
+border-radius:50px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:100px 10%;
+}
+
+.titulo{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#005baa;
+}
+
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.sobre img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.sobre p{
+font-size:1.1rem;
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+padding:30px;
+background:#f4f4f4;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#005baa;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+gap:25px;
+}
+
+.galeria img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.participe{
+background:linear-gradient(135deg,#005baa,#00a651);
+color:white;
+text-align:center;
+}
+
+.participe h2{
+margin-bottom:20px;
+}
+
+.participe p{
+max-width:800px;
+margin:auto;
+font-size:1.1rem;
+line-height:1.8;
+}
+
+.contato{
+text-align:center;
+}
+
+.contato p{
+font-size:1.2rem;
+margin:15px 0;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+z-index:999;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.sobre{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="assets/Fotos/logo.jfif" class="logo">
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#dancas">Danças</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>Grupo Folclórico Sensação Paraense</h1>
+
+<p>
+Preservando as raízes do Pará através da dança,
+da música e da cultura popular.
+</p>
+
+<a href="#sobre" class="btn">Conheça Nossa História</a>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2 class="titulo">Quem Somos</h2>
+
+<div class="sobre">
+
+<img src="assets/Fotos/apresentaçao1.jfif"><
+
+<div>
+
+<p>
+
+Fundado em Planaltina-DF, o Grupo Folclórico Sensação
+Paraense nasceu com a missão de preservar e divulgar
+as tradições culturais do estado do Pará.
+
+<br><br>
+
+Por meio do Carimbó, Siriá, Lundu e outras manifestações
+folclóricas, levamos ao público a riqueza da cultura
+amazônica, valorizando nossas raízes e fortalecendo
+a identidade cultural brasileira.
+
+<br><br>
+
+Nosso grupo reúne crianças, jovens e adultos apaixonados
+pela dança e pela cultura popular, transformando cada
+apresentação em um espetáculo de cores, alegria e tradição.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="dancas">
+
+<h2 class="titulo">Nossas Danças</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Carimbó</h3>
+<p>O ritmo mais tradicional do Pará.</p>
+</div>
+
+<div class="card">
+<h3>Siriá</h3>
+<p>Uma expressão cultural rica e vibrante.</p>
+</div>
+
+<div class="card">
+<h3>Lundu</h3>
+<p>Tradição, história e movimento.</p>
+</div>
+
+<div class="card">
+<h3>Danças Amazônicas</h3>
+<p>Representando a essência da Amazônia.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2 class="titulo">Galeria</h2>
+
+<h3 style="text-align:center; color:#005baa; font-size:1.8rem; margin:40px 0 30px;">👴 Grupo 60+</h3>
+<div class="galeria">
+<img src="assets/Fotos/60+.jfif" alt="Grupo 60+">
+<img src="assets/Fotos/60+2.jfif" alt="Grupo 60+ - 2">
+</div>
+
+<h3 style="text-align:center; color:#005baa; font-size:1.8rem; margin:40px 0 30px;">🎭 Apresentações e Cursos</h3>
+<div class="galeria">
+<img src="assets/Fotos/apresentaçao1.jfif" alt="Apresentação">
+<img src="assets/Fotos/Danças de casais.jpeg" alt="Danças de Casais">
+<img src="assets/Fotos/dança de casai2.jfif" alt="Danças de Casais 2">
+<img src="assets/Fotos/cursos.jfif" alt="Cursos">
+<img src="assets/Fotos/cursos2.jfif" alt="Cursos 2">
+<img src="assets/Fotos/crianças.jfif" alt="Crianças">
+</div>
+
+</section>
+
+<section class="participe">
+
+<h2 class="titulo" style="color:white;">
+Faça Parte da Nossa História
+</h2>
+
+<p>
+
+Estamos sempre de portas abertas para novos integrantes.
+Se você ama a cultura paraense, gosta de dançar e deseja
+representar nossas tradições, venha fazer parte do Grupo
+Folclórico Sensação Paraense.
+
+</p>
+
+</section>
+
+<section id="contato" class="contato">
+
+<h2 class="titulo">Contato</h2>
+
+<p>📍 Planaltina - Distrito Federal</p>
+
+<p>📱 WhatsApp: <a href="https://wa.me/5561SEUNUMERO" target="_blank" rel="noopener noreferrer" style="color:#005baa; text-decoration:none;">(61) XXXXX-XXXX</a></p>
+
+<p>📧 <a href="mailto:contato@sensacaoparaense.com.br" style="color:#005baa; text-decoration:none;">Email: contato@sensacaoparaense.com.br</a></p>
+
+<p>📷 <a href="https://instagram.com/sensacao_paraense" target="_blank" rel="noopener noreferrer" style="color:#005baa; text-decoration:none;">Instagram: @sensacao_paraense</a></p>
+
+</section>
+
+<footer>
+
+<h3>Grupo Folclórico Sensação Paraense</h3>
+
+<p>
+© 2026 Todos os direitos reservados
+</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/5561SEUNUMERO"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contato WhatsApp">
+💬
+</a>
+
+</body>
+</html>
